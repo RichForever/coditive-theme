@@ -1,33 +1,31 @@
+/*
+Breakpoints
+sm - min-width: 640px
+md - min-width: 768px
+lg - min-width: 1024px
+xl - min-width: 1280px
+2xl - min-width: 1536px
+*/
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+    overflow-x: hidden;
+}
+
 @import 'common/_variables.scss';
+@import 'common/_helpers.scss';
 @import 'common/_fonts.scss';
 @import 'common/_typography.scss';
+
 @import 'components/_button.scss';
 @import 'components/_card.scss';
+@import 'components/_icon.scss';
+@import 'components/_list.scss';
 
-section.section {
-    @apply px-4 py-12 mb-16;
-}
-
-footer {
-    background-color: $background-grey;
-    @apply px-4 py-12;
-}
-
-ul.list {
-    @apply mb-16;
-    li {
-            &:not(:last-child) {
-            margin-bottom: 10px;
-        }
-    }
-    &--custom {
-        li {
-            list-style-image: url('../images/icon-check.svg');
-            padding-left: 1rem;
-        }
-    }
-}
+@import 'sections/_header.scss';
+@import 'sections/_footer.scss';
+@import 'sections/_section.scss';
+@import 'sections/_advantages.scss';

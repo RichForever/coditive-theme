@@ -1,0 +1,8 @@
+.icon {
+    border-radius: 50px;
+    display: inline-block;
+    @apply p-4;
+    &--green {
+        background-color: rgba($color-green, .09);
+    }
+}

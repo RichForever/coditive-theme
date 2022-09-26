@@ -8,7 +8,7 @@
     @apply mb-5;
     + p {
         margin-bottom: 1.875rem;
-        @media screen and (min-width: 576px) {
+        @media screen and (min-width: 768px) {
             margin-bottom: 3.125rem;
         }
     }
@@ -17,7 +17,7 @@
 :is(h1, .heading-1) {    
     font-size: 2.875rem;
     line-height: 3.025rem;
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 768px) {
         font-size: 3.125rem;
         line-height: 4.375rem;
     }
@@ -26,7 +26,7 @@
 :is(h2, .heading-2) {
     font-size: 1.895rem;
     line-height: 2.653rem;
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 768px) {
         font-size: 2.1875rem;
         line-height: 3.125rem;  
     }
@@ -35,7 +35,7 @@
 :is(h3, .heading-3) {
     font-size: 1.5rem;
     line-height: 2.1rem;
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 768px) {
         font-size: 1.5625rem;
         line-height: 1.875rem;
     }    
@@ -46,12 +46,12 @@
     line-height: 1.875rem;  
 }
 
-:is(p, span, ul, li) {
+:is(p, span, ul, li, a, p > a) {
     font-size: 1rem;
     line-height: 1.525rem;
     font-weight: 400;
     color: $color-text-light;
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 768px) {
         font-size: 1rem;
         line-height: 1.875rem;
     }     

@@ -1,13 +1,7 @@
-<header class="banner px-4">
-  <div class="container mx-auto">
-      <a class="brand text-green-500" href="{{ home_url('/') }}">
-        {!! $siteName !!}
-      </a>
-
-      @if (has_nav_menu('primary_navigation'))
-        <nav class="nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
-          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'echo' => false]) !!}
-        </nav>
-      @endif
+<header class="banner px-4 py-8">
+  <div class="container mx-auto text-center md:text-left">
+    <h1 class="">
+      <a class="brand heading-3" href="{{ home_url('/') }}">{!! $siteName !!}</a>
+    </h1>
   </div>
 </header>
