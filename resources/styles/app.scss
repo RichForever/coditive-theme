@@ -2,4 +2,32 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import 'variables';
+@import 'common/_variables.scss';
+@import 'common/_fonts.scss';
+@import 'common/_typography.scss';
+@import 'components/_button.scss';
+@import 'components/_card.scss';
+
+section.section {
+    @apply px-4 py-12 mb-16;
+}
+
+footer {
+    background-color: $background-grey;
+    @apply px-4 py-12;
+}
+
+ul.list {
+    @apply mb-16;
+    li {
+            &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    &--custom {
+        li {
+            list-style-image: url('../images/icon-check.svg');
+            padding-left: 1rem;
+        }
+    }
+}

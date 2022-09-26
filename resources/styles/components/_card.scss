@@ -1,0 +1,47 @@
+.card {    
+    @apply px-4 py-12;
+    border-radius: 10px;
+    border: 2px solid $border-grey;
+    width: 100%;
+    &__header {
+        @apply mt-6 mb-8;
+    }
+    &__footer {
+        .button {
+            @apply mt-0;
+        }
+        span {
+            font-size: inherit;
+        }
+    }
+}
+
+.card-container {
+    justify-content: center;
+    &--scrolled {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        box-sizing: border-box;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        gap: 10px;
+        @apply px-2;
+        @media screen and (min-width: 576px) {
+            flex-wrap: wrap;
+            scroll-snap-type: none;
+            overflow-x: auto;
+            gap: 2rem;
+        }        
+        .card {
+            scroll-snap-align: center;
+            flex-shrink: 0;
+            width: calc(100% - 1rem);
+            @media screen and (min-width:576px) {
+                scroll-snap-align: unset;
+                width: calc((100% / 3) - 4rem);
+            }
+        }
+    }
+}
