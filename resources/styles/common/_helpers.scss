@@ -1,6 +1,27 @@
 .has-shadow {
-    box-shadow: 0px 52px 114px -34px rgba($color-text, 0.35);
+    box-shadow: 0px 52px 114px -34px rgba($color-text, 0.15);
     &--green {
-        box-shadow: 0px 25px 30px -15px rgba($color-green, .5);
+        box-shadow: 0px 25px 30px -15px rgba($color-green, .85);
     }
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    @media screen and (min-width: 640px) {
+        max-width: 640px;
+    }
+    @include mq('md') {
+        max-width: 768px;
+    }
+    @include mq('lg') {
+        max-width: 1024px;
+    }
+    @include mq('xl') {
+        max-width: 1280px;
+    }
+    @include mq('2xl') {
+        max-width: 1536px;
+    }
+
 }

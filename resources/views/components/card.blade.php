@@ -10,13 +10,15 @@
         <h3 class="heading-4">Free Plan</h3>
     </div>
 
-    <div class="card__content">          
-        <ul class="list list--custom">
-            <li>Unlimited Bandwitch</li>
-            <li>Unlimited Bandwitch</li>
-            <li>Unlimited Bandwitch</li>
-            <li>Unlimited Bandwitch</li>
-        </ul>
+    <div class="card__content"> 
+        <div class="list list--custom">
+            <ul>
+                <li>Unlimited Bandwitch</li>
+                <li>Unlimited Bandwitch</li>
+                <li>Unlimited Bandwitch</li>
+                <li>Unlimited Bandwitch</li>
+            </ul>
+        </div>         
     </div>
 
     <div class="card__footer">

@@ -1,17 +1,23 @@
-ul.list {
-    @apply mb-16;
-    li {
-            &:not(:last-child) {
-            margin-bottom: 10px;
+.list {
+    ul {
+        margin-bottom: 4rem;
+        li {
+                &:not(:last-child) {
+                margin-bottom: 10px;
+            }
         }
     }
     &--custom {
-        li {
-            list-style-image: url('../../images/icon-check.svg');
-            padding-left: 1rem;
-            @media screen and (min-width: 640px) {
-                padding-left: .25rem;
-            }
+        ul {
+            li {
+                list-style-image: url('../../images/icon-check.svg');
+                padding-left: 1rem;
+                width: fit-content;
+                margin: 0 auto;
+                @include mq('sm') {
+                    padding-left: .25rem;
+                }
+            }            
         }
     }
 }

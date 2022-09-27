@@ -1,7 +1,7 @@
 .icon {
     border-radius: 50px;
     display: inline-block;
-    @apply p-4;
+    padding: 1rem;
     &--green {
         background-color: rgba($color-green, .09);
     }

@@ -1,5 +1,7 @@
-<footer class="content-info px-4 md:px-6">
-  <div class="container mx-auto text-center lg:text-left">
-    @php(dynamic_sidebar('sidebar-footer'))
+<footer class="footer">
+  <div class="container">
+    <div class="footer__widgets">
+      @php(dynamic_sidebar('sidebar-footer'))
+    </div>    
   </div>
 </footer>

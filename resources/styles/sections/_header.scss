@@ -1,0 +1,9 @@
+header.banner {
+    padding: 2rem 1rem;
+    > .container {
+        text-align: center;
+        @include mq('lg') {
+            text-align: left;
+        }
+    }
+}

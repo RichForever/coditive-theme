@@ -1,7 +1,7 @@
-<header class="banner px-4 py-8">
-  <div class="container mx-auto text-center md:text-left">
+<header class="banner">
+  <div class="container">
     <h1 class="">
-      <a class="brand heading-3" href="{{ home_url('/') }}">{!! $siteName !!}</a>
+      <a class="banner__link heading-3" href="{{ home_url('/') }}">{!! $siteName !!}</a>
     </h1>
   </div>
 </header>

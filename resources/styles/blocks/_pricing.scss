@@ -1,0 +1,11 @@
+.pricing {
+    > .container {
+        text-align: center;
+    }
+    &__content {
+        @include mq('md') {
+            margin: 0 auto;
+            width: 66.666667%;
+        }           
+    }
+}

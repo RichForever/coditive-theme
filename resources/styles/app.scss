@@ -7,13 +7,15 @@ xl - min-width: 1280px
 2xl - min-width: 1536px
 */
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+// @import 'tailwindcss/base';
+// @import 'tailwindcss/components';
+// @import 'tailwindcss/utilities';
 
 body {
     overflow-x: hidden;
 }
+
+@import 'mixins/_responsive.scss';
 
 @import 'common/_variables.scss';
 @import 'common/_helpers.scss';
@@ -24,8 +26,12 @@ body {
 @import 'components/_card.scss';
 @import 'components/_icon.scss';
 @import 'components/_list.scss';
+@import 'components/_socials.scss';
 
 @import 'sections/_header.scss';
 @import 'sections/_footer.scss';
 @import 'sections/_section.scss';
-@import 'sections/_advantages.scss';
+
+@import 'blocks/_hero.scss';
+@import 'blocks/_advantages.scss';
+@import 'blocks/_pricing.scss';

@@ -2,56 +2,56 @@
     font-family: 'Rubik', sans-serif;
 }
 
-:is(h1, .heading-1, h2, .heading-2, h3, .heading-3, h4, .heading-4, h5, .heading-5, h6, .heading-6) {
+h1, .heading-1, h2, .heading-2, h3, .heading-3, h4, .heading-4, h5, .heading-5, h6, .heading-6 {
     font-weight: 500;
     color: $color-text;
-    @apply mb-5;
+    margin-bottom: 1.25rem;
     + p {
         margin-bottom: 1.875rem;
-        @media screen and (min-width: 768px) {
+        @include mq('md') {
             margin-bottom: 3.125rem;
         }
     }
 }
 
-:is(h1, .heading-1) {    
+h1, .heading-1 {    
     font-size: 2.875rem;
     line-height: 3.025rem;
-    @media screen and (min-width: 768px) {
+    @include mq('md') {
         font-size: 3.125rem;
         line-height: 4.375rem;
     }
 }
 
-:is(h2, .heading-2) {
+h2, .heading-2 {
     font-size: 1.895rem;
     line-height: 2.653rem;
-    @media screen and (min-width: 768px) {
+    @include mq('md') {
         font-size: 2.1875rem;
         line-height: 3.125rem;  
     }
 }
 
-:is(h3, .heading-3) {
+h3, .heading-3 {
     font-size: 1.5rem;
     line-height: 2.1rem;
-    @media screen and (min-width: 768px) {
+    @include mq('md') {
         font-size: 1.5625rem;
         line-height: 1.875rem;
     }    
 }
 
-:is(h4, .heading-4, h5, .heading-5) {
+h4, .heading-4, h5, .heading-5 {
     font-size: 1.125rem;
     line-height: 1.875rem;  
 }
 
-:is(p, span, ul, li, a, p > a) {
+p, span, ul, li, a, p > a {
     font-size: 1rem;
     line-height: 1.525rem;
     font-weight: 400;
     color: $color-text-light;
-    @media screen and (min-width: 768px) {
+    @include mq('md') {
         font-size: 1rem;
         line-height: 1.875rem;
     }     

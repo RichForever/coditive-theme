@@ -1,0 +1,30 @@
+.hero {
+    > .container {
+        text-align: center;
+        @include mq('lg') {
+            text-align: left;
+        }
+    }
+    &__wrapper {
+        @include mq('lg') {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__content {
+        @include mq('lg') {
+            width: 50%;
+        }        
+    }
+    &__image {
+        margin: 2.5rem auto 0;
+        @include mq('md') {
+            width: 75%;
+            margin-top: 4rem;
+        }          
+        @include mq('lg') {
+            width: 50%;
+            margin-top: 0;
+        }          
+    }
+}

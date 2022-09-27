@@ -1,13 +1,13 @@
-footer {
+.footer {
     background-color: $background-grey;
-    @apply px-4 py-12;
-    .container {
-        .widget {
-            &:not(:last-child) {
-                margin-bottom: 2rem;
-            }            
-        }
-        @media screen and (min-width: 768px) {            
+    padding: 3rem 1rem;
+    @include mq('md') {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    &__widgets {
+        text-align: center;
+        @include mq('md') {         
             display: grid;
             grid-template-areas: 
                 'col_1 col_1 col_1'
@@ -28,10 +28,11 @@ footer {
                 }
             }
         }
-        @media screen and (min-width: 1024px) {            
+        @include mq('lg') {
             display: grid;
             grid-template-areas: 'col_1 spacing col_2 col_3 col_4';
             grid-template-columns: 2fr minmax(50px, 200px) repeat(3, 1fr);
+            text-align: left;
             .widget {            
                 &:nth-child(1){
                     grid-area: col_1;
@@ -46,13 +47,18 @@ footer {
                     grid-area: col_4;
                 }
             }
-        }
-    }
-    ul {
-        li {
+        } 
+        .widget {
             &:not(:last-child) {
-                margin-bottom: 10px;
-            }
-        }
+                margin-bottom: 2rem;
+            }  
+            ul {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }                      
+        }       
     }
 }
