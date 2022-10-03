@@ -56,59 +56,19 @@
     </div>
 
     @hasfields('pricing_repeater')
-    <div class="pricing__cards card-container card-container--scrolled">
-        <!-- didn't work so paste raw html here
-        @include('components.card', ['some' => 'data']) -->
+
+    <div class="pricing__cards card-container card-container--scrolled">        
         @fields('pricing_repeater')  
-        <div class="card">
-
-            @hassub('icon')
-
-            @php
-              $iconId = get_sub_field('icon');
-            @endphp
-            <div class="card__icon">
-              <figure>
-                @image($iconId, 'thumbnail')
-              </figure>
-            </div>
-            @endsub
-
-            @hassub('title')
-            <div class="card__header">
-                <h3 class="heading-4">@sub('title')</h3>
-            </div>
-            @endsub
-
-            @hassub('benefits')
-            <div class="card__content">  
-              <div class="list list--custom">
-                @sub('benefits')
-              </div>                    
-            </div>
-            @endsub
-
-            @group('card_footer')
-            <div class="card__footer">
-              @hassub('price')
-                <h4 class="heading-3">
-                  @sub('price')
-                  @hassub('price_subtitle')
-                    <span>@sub('price_subtitle')</span>
-                  @endsub                  
-                </h4>
-              @endsub
-              @hassub('btn_label')
-                <a href="#" class="button button--rounded-full button--stroked">@sub('btn_label')</a>
-              @endsub              
-            </div>
-            @endgroup 
-
-        </div>
-        @endfields
-
-
+          @php
+            $title = get_sub_field('title');
+            $benefits = get_sub_field('benefits');
+            $icon = get_sub_field('icon');
+            $cardFooter = get_sub_field('card_footer');
+          @endphp
+          @include('components.card', ['title' => $title, 'benefits' => $benefits, 'icon' => $icon, 'footer' => $cardFooter])
+        @endfields        
     </div>
+    
     @endhasfields
 
   </div>
