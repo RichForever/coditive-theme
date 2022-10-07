@@ -1,6 +1,18 @@
 .footer {
     background-color: $background-grey;
     padding: 3rem 1rem;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        a {
+            text-decoration: none;
+            transition: all ease-in-out .2s;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
     @include mq('md') {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
